@@ -4,9 +4,5 @@ Aplicativo de listagem de tarefas
 
 Abaixo segue o resultado final do app com prints das telas de listagem, adicionar, atualizar e excluir as tarefas.
 
-![listagem](https://github.com/josecarlosfreitas/aula-react-native-youtube-tarefas/assets/7969534/18910e5e-0e37-438e-b541-3f17757f2785)
-
-![adicionar](https://github.com/josecarlosfreitas/aula-react-native-youtube-tarefas/assets/7969534/bc7caa23-2d0d-4a82-9679-e1610d0df9d8)
-
-![atualizar](https://github.com/josecarlosfreitas/aula-react-native-youtube-tarefas/assets/7969534/c698d68e-9acf-45ff-8692-41a29b6b11fc)
+![listagem](https://github.com/josecarlosfreitas/aula-react-native-youtube-tarefas/assets/7969534/23770732-c7f7-40e6-88b9-a7ed0afa480a)   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   ![adicionar](https://github.com/josecarlosfreitas/aula-react-native-youtube-tarefas/assets/7969534/8de2e773-6624-451a-b982-14306ff2da7c) ![atualizar](https://github.com/josecarlosfreitas/aula-react-native-youtube-tarefas/assets/7969534/98c598af-e88c-45db-a5cb-cb2ffe105065)
 
