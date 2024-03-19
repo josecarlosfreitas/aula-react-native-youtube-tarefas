@@ -14,7 +14,6 @@ export function listarTarefas(onSuccess) {
             "select * from tarefa order by descricao",
             [],
             (_, { rows: { _array } }) => {
-                console.log(_array);
                 return onSuccess(_array);
             },
             (_, error) => {
@@ -25,14 +24,46 @@ export function listarTarefas(onSuccess) {
 
 }
 
-export function adicionarTarefa(descricao, lida) {
+export function adicionarTarefa(descricao, lida, onSuccess, onError) {
     db.transaction((tx) => {
-        tx.executeSql(
-            "create table if not exists tarefa (id integer primary key not null, descricao string, lida int);"
+        tx.executeSql("insert into tarefa (descricao, lida) values (?, ?)",
+            [descricao, lida],
+            (_, { rows: { _array } }) => {
+                return onSuccess(_array);
+            },
+            (_, error) => {
+                return onError(error);
+            }
         );
     });
+}
 
+export function atualizarTarefa(id, descricao, lida, onSuccess, onError) {
     db.transaction((tx) => {
-        tx.executeSql("insert into tarefa (descricao, lida) values (?, ?)", [descricao, lida]);
+        tx.executeSql("update tarefa set descricao = ?, lida = ? where id = ?",
+            [descricao, lida, id],
+            (_, { rows: { _array } }) => {
+                return onSuccess(_array);
+            },
+            (_, error) => {
+                return onError(error);
+            }
+        );
     });
 }
+
+export function excluirTarefa(id, onSuccess, onError) {
+    db.transaction((tx) => {
+        tx.executeSql("delete from tarefa where id = ?",
+            [id],
+            (_, { rows: { _array } }) => {
+                return onSuccess(_array);
+            },
+            (_, error) => {
+                return onError(error);
+            }
+        );
+    });
+}
+
+
